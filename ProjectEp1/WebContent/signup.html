@@ -1,0 +1,177 @@
+<html>
+
+<head>
+	<title>Sign Up</title>
+	<style>
+		.container {
+ 			border-radius: 5px;
+ 			background-color: #3636;
+  			padding: 20px;
+			width: 55%;
+			}
+		.input{
+			width: 150%;
+ 			padding: 12px;
+ 			border: 1px solid #ccc;
+  			border-radius: 4px;
+  			box-sizing: border-box;
+  			margin-top: 10px;
+  			margin-bottom: 16px;
+  			resize: vertical;
+			cursor: pointer;
+		}
+		ul.topnavig
+		{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: grey;
+		}
+		ul.topnavig li{
+			float: left;
+		}
+		ul.topnavig li a {
+  			display: block;
+			color: white;
+			text-align: center;
+ 			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		ul.topnav li a:hover:not(.active) {background-color: #111;}
+		ul.topnav li a.active {background-color: #4CAF50;}
+		ul.topnav li.right {float: right;}
+
+		li a:hover, .dropdown:hover .dropbtn {
+  		background-color: green;
+		}
+
+	</style>
+
+	<script>
+		function verify()
+		{
+		
+				var x=document.getElementById("pass").value;
+				var y=document.getElementById("con").value;
+				if(x.length > 8)
+				{	
+					document.getElementById("p0").innerHTML="";
+				
+					if(x != y)
+						document.getElementById("p1").innerHTML="password doesn't matches";
+					else
+						document.getElementById("p1").innerHTML="";
+				}
+				else document.getElementById("p0").innerHTML="Password must be 8 characters long";
+
+		}
+		function check(n)
+		{
+			if (n == 1)
+			{
+				var x=document.getElementById("id1").value;
+				if(!isNaN(x) && x.length <= 10)
+					document.getElementById("p3").innerHTML="";
+			
+				else	
+					document.getElementById("p3").innerHTML="Should be a 10 digit number";
+			}
+			else{
+				var x=document.getElementById("mobile").value;
+				if(!isNaN(x) && x.length == 10)
+					document.getElementById("p2").innerHTML="";
+				else	
+					document.getElementById("p2").innerHTML="Should be a 10 digit number";
+				}
+		}	
+
+	</script>
+</head>
+<body>
+	<br><font color=white>
+					<h1 style="background-color:#3b5998;">Sign Up form</h1>
+				</font>
+			<hr>	
+
+	<ul class="topnavig">
+				<li><a class="active" href="project.html">Home</a></l>
+				<li><a href="#news">News</a></li>
+				<li class="right"><a href="#about">About</a></li>
+				<li class="right"><a href="login.html">LOG IN</a></li>
+			</ul>
+
+	<br><br><br>
+	<center>
+	<br>
+	
+	<form class="container" action="./Input">
+	<table>
+	<tr>
+		<th colspan=2>Sign Up</th>
+	</tr>
+
+	<tr>
+		<td>Employee Name:</td>
+		<td><input type=text placeholder=FirstName.. class="input" name="ename" required></td>
+	</tr>
+	
+	<tr>
+		<td>Employee Id:</td>
+		<td>
+			<input type=text placeholder="ID" class="input" id="id1" name="eid" onfocusout="check(1)" required>
+			<p id="p3"></p>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>Mobile NO:</td>
+		<td><input type=text placeholder="mobile no" id="mobile" name="mno" onfocusout="check(2)" class="input" required>
+		<p id="p2"></p>
+	</tr>
+	
+	<tr>
+	<td>
+		Email ID:</td>
+		<td>
+			<input type=email name="emailid" placeholder="Email ID" class="input" required>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>Designation:</td>
+		<td><input type=text name="designation" placeholder="Designation(MAN,LEA,EMP)" class="input" required></td>
+	</tr>
+	
+	<tr>
+		<td>
+			Password:
+		</td>
+		<td><input type=password name="pass" placeholder=password id="pass" class="input" required>
+		<p id="p0"></p>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>confirmpassword:</td>
+		<td><input type="password" placeholder="confirm password" id="con" class="input" onfocusout="verify()">
+		<p id="p1"><br></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td><input type=submit></td>
+		<td><a href="project.html"><button>cancel</button></a>
+		</td>
+	</tr>
+	</table>
+	</form>
+	
+	</center>
+		
+
+
+</body>
+
+</html>

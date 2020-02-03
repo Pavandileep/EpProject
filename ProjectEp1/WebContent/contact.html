@@ -1,0 +1,135 @@
+	<html>
+	<head>
+		<title>Contact Us</title>
+		
+		<style>
+		div.fixed {
+ 			position: fixed;
+  			width: 20%;
+			bottom: 10px;
+			border: 3px solid black;
+			color: red;
+		}
+		* {box-sizing: border-box;}
+		body {margin: 25px;}
+		.dropdown:hover .dropdown-content {
+  			display: block;
+		}
+
+		.dropdown-content a:hover {
+				  background-color: green;
+			}	
+		ul.topnavig
+		{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: grey;
+		}
+		ul.topnavig li{
+			float: left;
+		}
+		ul.topnavig li a {
+  			display: block;
+			color: white;
+			text-align: center;
+ 			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		ul.topnav li a:hover:not(.active) {background-color: #111;}
+		ul.topnav li a.active {background-color: #4CAF50;}
+		ul.topnav li.right {float: right;}
+
+		@media screen and (max-width: 600px) {
+			  ul.topnav li.right, 
+			  ul.topnav li {float: none;
+			}
+		}
+		li a:hover, .dropdown:hover .dropbtn {
+  		background-color: green;
+		}
+
+
+
+
+
+		.container {
+ 			border-radius: 5px;
+ 			background-color: #3636;
+  			padding: 20px;
+			width: 55%;
+			}
+
+
+		.input{
+			width: 60%;
+ 			padding: 12px;
+ 			border: 1px solid #ccc;
+  			border-radius: 4px;
+  			box-sizing: border-box;
+  			margin-top: 10px;
+  			margin-bottom: 16px;
+  			resize: vertical;
+			cursor: pointer;
+		}.query{
+			width: 60%;
+ 			padding: 12px;
+ 			border: 1px solid #ccc;
+  			border-radius: 4px;
+  			box-sizing: border-box;
+  			margin-top: 10px;
+  			margin-bottom: 16px;
+  			resize: vertical;
+			cursor: pointer;
+		}
+		.submit
+		{
+			background-color: #32CD32;
+			box-sizing: border-box;
+			padding: 20px;
+			border-radius: 25px;
+			cursor: pointer;
+			border: 2px solid black;
+		}
+		input[type=submit]:hover{ background-color: #00FF00;}
+		</style>
+		
+	</head>	
+	<body >
+
+
+
+			<br><font color=white>
+					<h1 style="background-color:#3b5998;">Welcome To The Permission approval system</h1>
+				</font>
+			<hr>	
+
+			<ul class="topnavig">
+				<li><a class="active" href="project.html">Home</a></l>
+				<li><a href="#news">News</a></li>
+				<li class="right"><a href="#about">About</a></li>
+				<li class="right"><a href="login.html">LOG IN</a></li>
+				<li class="right"><a href="signup.html">Sign Up</a></li>
+			</ul>
+
+
+			<br><br><br>
+		<center>
+			<div class="container">
+			<form style="text-alignment:right">
+				First Name:<br><input type="text" height=90px placeholder="First Name" class="input"><br><br><br>
+				Last Name:<br><input type="text " placeholder="Last Name" class="input"><br><br><br>
+				Query:<br>
+				<textarea placeholder="Write your query...." class="query" style="height:200px"></textarea><br><br><br>
+				<input type="submit" value=submit class="submit">
+
+
+			</form>
+			</div>	
+		</center>		
+
+	</body>
+
+</html>
